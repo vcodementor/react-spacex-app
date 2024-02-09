@@ -1,5 +1,3 @@
-Certainly! Here's a more polished and comprehensive version of the `README.md` file:
-
 ```markdown
 # SpaceX Launches Web Application
 
