@@ -1,0 +1,35 @@
+:root {
+  --text: #f3f3f3;
+  --blue: #527af9;
+  --black: rgb(27, 27, 27);
+  --white: white;
+  --offwhite: #f5f5f5;
+  --side-bg: #242424;
+  --bg: #121118;
+  --lightgrey: #585858;
+  --darkgrey: #252525;
+  --pink: #e900cc;
+  --green: #15af5c;
+  --sub-text: #dfdfdf;
+}
+
+.light-mode {
+  --text: #000000;
+  --blue: #527af9;
+  --black: #eeeeeecc;
+  --white: rgb(255, 255, 255);
+  --offwhite: #000000;
+  --side-bg: #d6d6d6;
+  --bg: #ffffff;
+  --lightgrey: #e4e4e4;
+  --darkgrey: #3d3d3d;
+  --pink: #e900cc;
+  --green: #15af5c;
+  --sub-text: #000000;
+}
+  
+  
+body {
+  margin: 0;
+}
+  
