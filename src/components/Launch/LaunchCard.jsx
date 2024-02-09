@@ -6,7 +6,7 @@ import moment from 'moment';
 const LaunchCard = ({ launch }) => {
   return (
     <Card>
-      <CardActionArea href={`/launch/${launch?.id}`}>
+      <CardActionArea component={Link} to={`/launch/${launch?.id}`} >
         <CardHeader
           avatar={
             <Avatar
