@@ -30,7 +30,7 @@ const LaunchPage = () => {
     if (selectedFilter === 'upcoming') {
       return launch.upcoming == false;
     } else if (selectedFilter === 'successful') {
-      return  launch.launch_success === true ||launch.launch_success == null ;
+      return  launch.launch_success === true ;
     } else if (selectedFilter === 'failed') {
       return launch.launch_success === false || launch.launch_success == null;
     } else {
