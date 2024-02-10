@@ -1,14 +1,23 @@
 import React from 'react';
-import { Card, CardMedia,CardContent, Typography, Link, Grid, Chip, Button, IconButton } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import { Card, CardMedia,CardContent,CardActions, Typography, Link, Grid, Chip, Button, IconButton } from '@mui/material';
 import moment from 'moment';
 import defaultImage from '../../assets/images/spacex.webp';
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 
 const LaunchDetail = ({ launch }) => {
-    console.log(launch);
+  let navigate = useNavigate();
+
   const { mission_name, launch_date_utc, launch_success, launch_site, details, rocket, links } = launch;
 
   return (
     <Card style={{ maxWidth: 800, margin: 'auto', marginTop: '1.5rem', marginBottom: '1.5rem' }}>
+       <CardActions>
+        <IconButton onClick={() => navigate(-1)} color="primary">
+          <KeyboardBackspaceIcon/> 
+        </IconButton>
+        <Typography variant="subtitle 1 "> Launch Detail </Typography>
+      </CardActions>
       <CardMedia
           component="img"
           alt={launch.mission_name}
@@ -39,7 +48,7 @@ const LaunchDetail = ({ launch }) => {
               />
             ))}
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} sx={{ display: "flex" , alignItems: "center" , justifyContent: "Center"}}>
             <iframe
               title="SpaceX Launch Video"
               width="560"
@@ -52,12 +61,8 @@ const LaunchDetail = ({ launch }) => {
           </Grid>
           <Grid item xs={12}>
             <Typography variant="subtitle1">Useful Links:</Typography>
-            <Button href={links?.wikipedia} target="_blank" rel="noopener" variant="contained" style={{ marginRight: '0.5rem' }}>
-              Wikipedia
-            </Button>
-            <Button href={links?.article_link} target="_blank" rel="noopener" variant="contained" style={{ marginRight: '0.5rem' }}>
-              Artical
-            </Button>
+            <Chip href={links?.wikipedia} color="primary" label="Wikipedia" target="_blank" rel="noopener" variant="contained" style={{ marginRight: '0.5rem' }} />
+            <Chip href={links?.article_link} color="primary" label="Artical" target="_blank" rel="noopener" variant="contained" style={{ marginRight: '0.5rem' }} />
           </Grid>
         </Grid>
       </CardContent>
