@@ -56,7 +56,7 @@ const LaunchDetail = ({ launch }) => {
               Wikipedia
             </Button>
             <Button href={links?.article_link} target="_blank" rel="noopener" variant="contained" style={{ marginRight: '0.5rem' }}>
-              Read more
+              Artical
             </Button>
           </Grid>
         </Grid>

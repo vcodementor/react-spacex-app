@@ -12,7 +12,7 @@ const LaunchCard = ({ launch }) => {
           avatar={
             <Avatar
               aria-label="recipe"
-              src={launch?.links?.mission_patch_small || ""}
+              src={launch?.links?.mission_patch_small || defaultImage}
             />
           }
           title={launch?.mission_name}
