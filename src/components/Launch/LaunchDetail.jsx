@@ -1,21 +1,20 @@
 import React from 'react';
 import { Card, CardMedia,CardContent, Typography, Link, Grid, Chip, Button, IconButton } from '@mui/material';
 import moment from 'moment';
+import defaultImage from '../../assets/images/spacex.webp';
 
 const LaunchDetail = ({ launch }) => {
     console.log(launch);
-  const { mission_name, launch_date_utc, launch_success, launch_site, details, rocket, links,static_fire_date_utc } = launch;
+  const { mission_name, launch_date_utc, launch_success, launch_site, details, rocket, links } = launch;
 
   return (
     <Card style={{ maxWidth: 800, margin: 'auto', marginTop: '1.5rem', marginBottom: '1.5rem' }}>
-      <CardContent style={{display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        {/* <CardMedia
+      <CardMedia
           component="img"
           alt={launch.mission_name}
-          image={links?.mission_patch}
-          style={{ width: '50vw', height: 'auto', objectFit: 'cover', }} 
-        /> */}
-      </CardContent>
+          image={links?.mission_patch ? links?.mission_patch : defaultImage}
+          style={{ width: '100%', height: '30vh', objectFit: 'cover'}} 
+      />
       <CardContent>
         <Typography variant="h4" gutterBottom>
           {mission_name}
