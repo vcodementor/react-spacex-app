@@ -61,8 +61,12 @@ const LaunchDetail = ({ launch }) => {
           </Grid>
           <Grid item xs={12}>
             <Typography variant="subtitle1">Useful Links:</Typography>
-            <Chip href={links?.wikipedia} color="primary" label="Wikipedia" target="_blank" rel="noopener" variant="contained" style={{ marginRight: '0.5rem' }} />
-            <Chip href={links?.article_link} color="primary" label="Artical" target="_blank" rel="noopener" variant="contained" style={{ marginRight: '0.5rem' }} />
+            <Link href={links?.wikipedia} target="_blank" rel="noopener" >
+              <Chip  label="Wikipedia"  color="primary"  style={{ marginRight: '0.5rem' }} />
+            </Link>
+            <Link href={links?.article_link} target="_blank" rel="noopener" >
+            <Chip   label="Artical" color="primary"  style={{ marginRight: '0.5rem' }} />
+            </Link>
           </Grid>
         </Grid>
       </CardContent>
